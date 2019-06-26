@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.section{
+    position: relative;
+}
+
+.contain-contact{
+    position: relative;
+    width: 50%;
+    height: 550px;
+    margin: 0 auto;
+    top: 25px;
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,0.6);
+}
+
+.turn{
+    opacity: 0.7;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.3);
+}
+
+.turn:hover{
+    box-shadow: 0 10px 18px 0 rgba(0,0,0,0.7);
+    opacity: 1;
+    transition: all 0.5s;
+}
+
+.contain-contact .front-card,.back-card{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+    perspective :600px;
+    -webkit-perspective: 600px;
+    -moz-perspective: 600px;
+}
+
+.contain-contact .front-card{
+    text-align: center;
+    background-color: #28c328;
+    /* Assign The 3D Transform */
+    -webkit-transform: rotateX(0deg) rotateY(0deg);
+    -webkit-transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    -moz-transform: rotateX(0deg) rotateY(0deg);
+
+    -moz-backface-visibility: hidden;
+    /* Transition Effect */
+    transition: all 0.3s linear 0.3s;
+    -webkit-transition: all 0.3s linear 0.3s;
+    -moz-transition: all 0.3s linear 0.3s;
+    -o-transition: all 0.3s linear 0.3s;
+}
+
+.contain-contact .back-card{
+    background-color: rgb(255,255,255);
+    /* Assign The 3D Transform */
+    -webkit-transform:rotateX(180deg);
+    -webkit-transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    -moz-transform:rotateX(180deg);
+    -moz-backface-visibility: hidden;
+    /* Transition Effect */
+    transition: all 0.3s linear 0.3s;
+    -webkit-transition: all 0.3s linear 0.3s;
+    -moz-transition: all 0.3s linear 0.3s;
+    -o-transition: all 0.3s linear 0.3s;
+}
+
+.contain-contact.flipping .front-card{
+    -webkit-transform:rotateX(180deg);
+    -moz-transform:rotateX(180deg);
+}
+
+.contain-contact.flipping .back-card{
+    -webkit-transform: rotateX(0deg) rotateY(0deg);
+    -moz-transform:rotateX(0deg) rotateY(0deg);
+}
+
+.contain-contact .front-card > .btn-msg{
+    display: inline-block;
+    cursor: pointer;
+    color: white;
+    border: 3px solid white;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 10px 50px;
+    margin: 262px 0;
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+
+.back-card .form-msg {
+    margin: 20px 0;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.form-msg label{
+    position: relative;
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-align: left;
+    color: #28c328;
+}
+
+.form-msg label, textarea, .inp{
+    width: 80%;
+}
+
+.form-msg #last-label{
+    margin-bottom: 20px;
+}
+
+.form-msg .inp{
+    border: none;
+    border-bottom: 1px solid darkolivegreen;
+}
+
+.form-msg textarea{
+    border: 1px solid darkolivegreen;
+    border-radius: 3px;
+}
+
+.btn-subm{
+    background-color: #28c328;
+    color: white;
+    border: none;
+    padding: 20px;
+    font-size: 20px;
+    text-transform: capitalize;
+    margin: 25px 70px;
+    float: left;
+    border-radius: 3px;
+}
+
+.form-msg textarea, .inp:focus{
+    outline: none;
+}
+
+.lab:after{
+    content: '*';
+    position: absolute;
+    color: red;
+    font-size: 25px;
+    top: -8px;
+}
+
+.form-msg .fa-exclamation{
+    position: absolute;
+    color: red;
+    font-size: 20px;
+    right: 11%;
+    opacity: 0;
+}
+
+.form-msg .last{
+    margin-top: 10px;
+}
+
+.show{
+    opacity: 1!important;
+}
